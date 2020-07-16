@@ -35,7 +35,4 @@ npm install
 
 #vncserver
 
-echo "Mercurio dice: Conectar con Vnc Viewer server_ip:5901\n\n"
-echo "Atención: VncViewer no conecta cuando el ejecutable vncserver se está ejecutando más de una vez\nRevisar ejecución de vncserver con #pgrep vnc\nCerrar proceso vncserver con kill numero_de_proceso_vncserver\n\n"
-echo "Todo el Vnc Server y Client funciona con el puerto 5901. Hay que habititar el puerto 5901 en el firewall del panel del cloud.\n\n"
 echo "Recordar abrir los puertos o rango de puertos 8080-8081 para el server nodejs.\n\n"
