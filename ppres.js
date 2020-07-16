@@ -29,12 +29,12 @@ module.exports=function(app){
         res.status(200).send({'ping':10})
     }
     newPPres = function(req, res){
-        let v1 = req.query.nom
+        let v1 = req.query.idproducto
         let d0=new Date(Date.now())
         let sd=''+d0.getDate()+'/'+parseInt(d0.getMonth()+1)+'/'+d0.getFullYear()+' '+d0.getHours()+':'+d0.getMinutes()+':'+d0.getSeconds()
         res.status(200).send('correo enviado! '+sd)
         setAndSendEmail(v1)
     }
-    app.get('/cn/get', newPPres);
+    app.get('/getpres', newPPres);
     app.get('/ping', newPing);
 }

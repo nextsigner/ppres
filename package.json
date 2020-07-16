@@ -1,37 +1,37 @@
 {
   "name": "ppres",
   "version": "1.0.0",
-  "description": "Servidor para Módulo Unik Qml Engine Mercurio",
+  "description": "Servidor para presupuestos de articulos",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nextsigner/mercurio-server.git"
+    "url": "git+https://github.com/nextsigner/ppres.git"
   },
-  "keywords": [
-    "astrology",
-    "astrologia",
-    "mercurio",
+  "keywords": [    
     "server",
     "servidor"
   ],
   "author": "@nextsigner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nextsigner/mercurio-server/issues"
+    "url": "https://github.com/nextsigner/ppres/issues"
   },
-  "homepage": "https://github.com/nextsigner/mercurio-server#readme",
+  "homepage": "https://github.com/nextsigner/ppres#readme",
   "dependencies": {
     "child_process": "^1.0.2",
     "connect": "^3.7.0",
     "express": "^4.17.1",
     "forever": "^3.0.0",
     "fs": "0.0.1-security",
+    "mongoose": "^5.9.24",
     "nodemailer": "^6.4.6",
     "path": "^0.12.7",
     "serve-static": "^1.14.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
