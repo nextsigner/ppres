@@ -48,3 +48,13 @@ mongoose.connect(urlMongoDatabase, { useNewUrlParser: true }, function (err, res
         console.log('Puertos: App=' + app.get('port') + '  Files='+ puertoStatico);
     });
 })
+
+//const pdf2html = require('pdf2html')
+
+//pdf2html.html('lista.pdf', (err, html) => {
+//    if (err) {
+//        console.error('Conversion error: ' + err)
+//    } else {
+//        console.log(html)
+//    }
+//})

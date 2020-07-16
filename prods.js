@@ -25,8 +25,9 @@
                              //res.redirect('/res-add-producto.html?res=no'+mensajes.length)
                              //Registra el producto porque no existe ninguno con ese nombre
                              let producto = new Producto()
+                             producto.categoria = req.query.categoria
                              producto.nombre = req.query.nombre
-                             producto.precio=req.query.precio
+                             producto.precio = req.query.precio
                              producto.fechaRegistro = new Date(Date.now())
                              console.log('Creando un nuevo producto nombre: '+producto.nombre+' precio: '+producto.precio)
                              producto.save(function(err, userRegistered){
@@ -75,3 +76,4 @@
     app.get('/chat/set/user', setChatUser);
     app.get('/chat/get/user', getChatUser);
 }
+
