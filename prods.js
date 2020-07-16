@@ -18,9 +18,9 @@
                              nombre: 1 //Sort by Date Added DESC
                          }
                      },
-                     function(err,mensajes){
+                     function(err, resultados){
                          if(err) res.status(500).send({mensaje: `Error al buscar mensajes: ${err}`})
-                         if(mensajes.length===0){
+                         if(resultados.length===0){
                              console.log('Registrando el dato del producto '+req.query.nombre);
                              //res.redirect('/res-add-producto.html?res=no'+mensajes.length)
                              //Registra el producto porque no existe ninguno con ese nombre
@@ -44,39 +44,7 @@
                              res.redirect('/res-add-producto.html?res='+msg)
                          }
                      })
-        //        let nom= req.query.nombre
-//        Producto.find({nombre : "alarma 34"}, function(err, producto){
-//            if(err){
-//                res.status(500).send({prod: `Error al buscar producto: ${err}`})
-//                return
-//            }
-//            console.log('prod '+producto._id)
-//            if(!producto){
-//                console.log('No había producto con nombre '+req.query.nombre)
-//                //Registra el producto porque no existe ninguno con ese nombre
-//                let producto = new Producto()
-//                producto.nombre = req.query.nombre
-//                producto.precio=req.query.precio
-//                producto.fechaRegistro = new Date(Date.now())
-//                console.log('Creando un nuevo producto nombre: '+producto.nombre+' precio: '+producto.precio)
-//                producto.save(function(err, userRegistered){
-//                    if(err){
-//                        res.status(500).send(`Error when user register: ${err}`)
-//                        return
-//                    }
-//                    res.redirect('/res-add-producto.html?res=El+producto+se+ha+agregado+correctamente&pid='+userRegistered._id)
-//                    //res.status(200).send({producto: userRegistered})
-//                })
-//                return
-//            }
-//            //res.redirect('/res-add-producto.html?res=321')
-//            let msg='No+se+ha+registrado+el+productoYa+existe+un+producto+con+el+nombre+'+(''+nom).replace(/ /g, '%20')
-//            res.redirect('/res-add-producto.html?res='+msg)
-//            //res.status(200).send({'producto': producto})
-//        })
-
     }
-
     setChatUser = function(req, res){
         let userId = req.query.userId
         let update = req.body
