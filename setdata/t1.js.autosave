@@ -17,6 +17,8 @@ adicionalporelemento : "50"zzzz
 };
 db.productos.insert(document);
 
+document = {}
+
 document = {
 categoria  : "TIPO 1) ALARMAS ESTÁNDAR (Honeywell VISTA 48) - ABONO MENSUAL",
 nombre : "Pack INICIAL (SSSA)",

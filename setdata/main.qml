@@ -1,5 +1,6 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.0
+import "funcs.js" as JS
 
 ApplicationWindow{
     id: app
@@ -32,63 +33,13 @@ ApplicationWindow{
         onActivated: Qt.quit()
     }
     Component.onCompleted: {
+        //TODO Obtener los datos de t3 Pymes
         logView.showLog('Iniciando...')
-        let d=unik.getFile('t1').replace('Nave,\n', 'Nave, ')
-        let m0=d.split('\n')
-        let colNom1=''
-        let colNom2=''
-        let colNom3=''
-        let colNom4=''
-        let colNom5=''
-        logView.showLog('Cantidad de lineas: '+m0.length)
-        let script='var document;\n'
-        for(var i=0;i<m0.length;i++){
-            let linea=''+m0[i].replace(/ (/g, '(')
-            logView.showLog('--->'+linea)
-            if(i===0){
-                let m1=linea.replace('TIPO VIVIENDA ', '').split(' ')
-                //let m1=linea.split(' ')
-                colNom1=m1[0]
-                colNom2=m1[1]
-                colNom3=m1[2]
-                colNom4=m1[3]
-                colNom5=m1[4]
-                logView.showLog('Cols: '+colNom1+' '+colNom2+' '+colNom3+' '+colNom4+' '+colNom5+' ')
-            }else{
-                if(linea.indexOf('ADICIONAL POR ELEMENTO')<0&&linea!==''){
-                    let m2=linea.split(' $')
-                    script+='document = {\n'
-                            +'categoria  : "TIPO 1) ALARMAS ESTÁNDAR (Honeywell VISTA 48) - ABONO MENSUAL",\n'
-                            +'nombre : "'+m2[0]+'",\n'
-                            +'tipovivienda : "'+colNom1+'",\n'
-                            +'precio : "'+m2[1].replace(/ /g, '')+'"\n'
-                            +'};\n'
-                            +'db.productos.insert(document);\n\n'
-                    script+='document = {\n'
-                            +'categoria  : "TIPO 1) ALARMAS ESTÁNDAR (Honeywell VISTA 48) - ABONO MENSUAL",\n'
-                            +'nombre : "'+m2[0]+'",\n'
-                            +'tipovivienda : "'+colNom2+'",\n'
-                            +'precio : "'+m2[2].replace(/ /g, '')+'"\n'
-                            +'};\n'
-                            +'db.productos.insert(document);\n\n'
-                    script+='document = {\n'
-                            +'categoria  : "TIPO 1) ALARMAS ESTÁNDAR (Honeywell VISTA 48) - ABONO MENSUAL",\n'
-                            +'nombre : "'+m2[0]+'",\n'
-                            +'tipovivienda : "'+colNom3+'",\n'
-                            +'precio : "'+m2[3].replace(/ /g, '')+'"\n'
-                            +'};\n'
-                            +'db.productos.insert(document);\n\n'
-                    script+='document = {\n'
-                            +'categoria  : "TIPO 1) ALARMAS ESTÁNDAR (Honeywell VISTA 48) - ABONO MENSUAL",\n'
-                            +'nombre : "'+m2[0]+'",\n'
-                            +'tipovivienda : "'+colNom4+'",\n'
-                            +'precio : "'+m2[4].replace(/ /g, '')+'"\n'
-                            +'};\n'
-                            +'db.productos.insert(document);\n\n'
-                }
-            }
-        }
-        logView.showLog('Script JavaScript para MongoDB: '+script)
-        unik.setFile('t1.js', script)
+        let t1=JS.setT1()
+        let t2=JS.setT2()
+        let t3=JS.setT3()
+        let tf=t1+'\n'+t2+'\n'+t3
+        unik.setFile('fullScript.js', tf)
+        logView.showLog(tf)
     }
 }
