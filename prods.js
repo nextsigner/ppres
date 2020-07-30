@@ -55,7 +55,7 @@
                           //date: {$gte: h, $lte: hf }
                           nombre: regExp // Search Filters
                       },
-                      ['nombre'], // Columns to Return
+                      ['categoria', 'nombre', 'tipovivienda', 'precio', 'adicionalporelemento'], // Columns to Return
                       {
                           skip:0, // Starting Row
                           //limit:1, // Ending Row
