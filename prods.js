@@ -52,7 +52,7 @@
                           //date: {$gt: h }
                           //date: {$gte: "2019-06-12T00:00:00+01:00", $lte: "2019-12-12T23:00:00+01:00" }
                           //date: {$gte: h, $lte: hf }
-                          nombre:req.query.consulta // Search Filters
+                          nombre: '%'+req.query.consulta+'%' // Search Filters
                       },
                       ['nombre'], // Columns to Return
                       {
