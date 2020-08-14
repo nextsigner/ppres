@@ -1,7 +1,14 @@
 ﻿module.exports=function(app){
 
     const Producto = require('./models/Productos')
-
+    /*
+                descripcion
+                codigo
+                precioinstalacion
+                precioabono
+                adicionalriesgo
+                observaciones
+    */
     nuevoProducto = function(req, res){
         console.log('Insertando producto con nombre '+req.query.nombre)
         Producto.find({
@@ -53,14 +60,14 @@
                           //date: {$gt: h }
                           //date: {$gte: "2019-06-12T00:00:00+01:00", $lte: "2019-12-12T23:00:00+01:00" }
                           //date: {$gte: h, $lte: hf }
-                          nombre: regExp // Search Filters
+                          descripcion: regExp // Search Filters
                       },
-                      ['categoria', 'nombre', 'tipovivienda', 'precio', 'adicionalporelemento'], // Columns to Return
+                      ['descripcion', 'codigo', 'precioinstalacion', 'precioabono', 'adicionalriesgo', 'observaciones'], // Columns to Return
                       {
                           skip:0, // Starting Row
                           //limit:1, // Ending Row
                           sort:{
-                              nombre: 1 //Sort by Date Added DESC
+                              descripcion: 1 //Sort by Date Added DESC
                           }
                       },
                       function(err, resultados){
