@@ -20,11 +20,11 @@ function setCSV(archivo) {
         let m2=linea.split(';')
 
         script+='document = {\n'
-                +'descripcion  : "'+m2[1]+'",\n'
-                +'codigo : "'+m2[2]+'",\n'
-                +'precioinstalacion : "'+m2[3]+'",\n'
-                +'precioabono : "'+m2[4]+'",\n'
-                +'adicionalriesgo : "'+m2[5]+'",\n'
+                +'descripcion  : "'+(''+m2[1]).replace(/"/g,'')+'",\n'
+                +'codigo : "'+(''+m2[2]).replace(/"/g,'')+'",\n'
+                +'precioinstalacion : "'+(''+m2[3]).replace(/"/g,'')+'",\n'
+                +'precioabono : "'+(''+m2[4]).replace(/"/g,'')+'",\n'
+                +'adicionalriesgo : "'+(''+m2[5]).replace(/"/g,'')+'",\n'
                 +'observaciones : "'+(''+m2[6]).replace(/"/g,'')+'"\n'
                 +'};\n'
                 +'db.productos.insert(document);\n\n'

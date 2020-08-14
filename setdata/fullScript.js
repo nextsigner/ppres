@@ -1030,7 +1030,7 @@ observaciones : ""
 db.productos.insert(document);
 
 document = {
-descripcion  : ""MONITOR LCD 19"""",
+descripcion  : "MONITOR LCD 19",
 codigo : "LCD19",
 precioinstalacion : "8300",
 precioabono : "-",
@@ -1324,7 +1324,7 @@ descripcion  : "PLACA DE EXPANSION",
 codigo : "EXP ACC",
 precioinstalacion : "$                                              -",
 precioabono : "-",
-adicionalriesgo : ""Anexar a partir de 6 puertas o mas, siempre va 1 controladora + N expansoras (N=q",
+adicionalriesgo : "Anexar a partir de 6 puertas o mas, siempre va 1 controladora + N expansoras (N=q",
 observaciones : "undefined"
 };
 db.productos.insert(document);
