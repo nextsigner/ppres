@@ -1,0 +1,150 @@
+;Descripción ;Código;$ Instalacion;$ Abono;$ A. Riesgo;Observaciones
+1;CHASIS (incluye: central, batería, teclado, sirena interna);CHASIS UNIFICADO;11990;-;-;NO incluye CR
+2;DETECTOR VOLUMÉTRICO INALÁMBRICO;DI;1450;50;62,5;
+3;DETECTOR MAGNÉTICO INALÁMBRICO;MI;750;50;62,5;
+4;DETECTOR VOLUMÉTRICO EXTERIOR INALÁMBRICO;VXI;8950;50;62,5;Cargar en Siebel MI de respaldo, sin cargo. DESCMIX.
+5;DETECTOR LATERAL EXTERIOR INALÁMBRICO;DLI;9600;50;62,5;Cargar en Siebel MI de respaldo, sin cargo. DESCMIX.
+6;DETECTOR VOLUMÉTRICO CABLEADO;D;1850;50;62,5;
+7;DETECTOR MAGNÉTICO CABLEADO;M;605;50;62,5;
+8;DETECTOR MAGNÉTICO DE PORTON CABLEADO;MP;880;50;62,5;
+9;DETECTOR VOLUMÉTRICO SEMI EXTERIOR CABLEADO;DX;7600;50;62,5;
+10;DETECTOR VOLUMÉTRICO EXTERIOR CABLEADO;VX;9625;50;62,5;
+11;DETECTOR LATERAL EXTERIOR CABLEADO;DL;12250;50;62,5;
+12;DETECTOR SÍSMICO CABLEADO;DS;3050;50;62,5;
+13;DETECTOR ANTIMASKING CABLEADO;DA;5700;50;62,5;"Ocupa 2 zonas en la central. Informar a Dpto. Técnico para
+compra de este equipo."
+14;DETECTOR ANTIMASKING EXTERIOR CABLEADO;DAX;7250;50;62,5;"Ocupa 2 zonas en la central. Informar a Dpto. Técnico para
+compra de este equipo."
+15;DETECTOR 360ª CABLEADO;DU;8050;50;62,5;Instalaciones mayores a 4 mts de altura, cotizar autoelevador.
+16;DETECTOR ROTURA CRISTALES CABLEADO;RV;2250;50;62,5;
+17;DETECTOR TEMPERATURA CABLEADO;E;2700;50;62,5;"Por pedido. Informar al Dpto. Técnico para comprar el equipamiento."
+18;CONTROL REMOTO LLAVERO INALÁMBRICO;CR;715;50;62,5;"Equipos cableados necesitan la receptora (A) para el CR. No suma en el chasis."
+19;RECEPTOR ENCRYPTOR CR II CABLEADO;A;3135;-;-;"CR necesita la receptora (A) para ser vendido, excepto eq. Vista o Alonso. Ocupa una zona, pero no modifica abono."
+20;PULSADOR FIJO CABLEADO;P;550;50;62,5;
+21;FILTRO ADSL CABLEADO;L;660;-;-;No suma en el chasis.
+22;BACK UP GPRS CABLEADO;Q;8300;230;287,5;"No suma en el chasis. Incluye fuente de alimentación autónoma. No se carga mas linea de GPRSA solo el Q"
+23;SIM;SIM;$                                              -;-;-;Siempre que se cargue un Q cargar una sim
+24;REPETIDORA INALÁMBRICA;RI;5200;-;-;"Solo Vista 48. Es necesaria su instalación en propiedades de 3 plantas."
+25;GABINETE;GA;6105;-;-;"Por pedido. Informar al Dpto. Técnico para comprar el equipamiento. No suma en el chasis"
+26;CENTRAL;C;7700;-;-;
+27;TECLADO CABLEADO;T;3630;-;-;No suma en el chasis.
+28;SIRENA INTERNA CABLEADA;S;660;-;-;No suma en el chasis.
+29;SIRENA EXTERNA CABLEADA;SE;3400;-;-;No suma en el chasis.
+30;CAMBIO DE CHASIS;C9-16 / C16-32;5918;-;-;"Equipos cableados y DSC inalámbricos de + 8, + 16, + 32 elementos."
+31;PRECIO POR VISITA DE SERVICE;;880;-;-;Para clientes sin service en su abono
+32;MUDANZA DE CENTRAL;MUD CENTRAL;4730;-;-;Cliente con + de 5 años de antigüedad, s/cargo.
+33;MUDANZA DE ELEMENTO;MUDEL;495;-;-;
+34;CORRIMIENTO DE CENTRAL;;4730;-;-;
+35;CORRIMIENTO ELEMENTO;CORRI;495;-;-;
+38;CAMARA MANAGER INTERIOR WIFI;CMIWIFI;8470;370;462,5;SOLO PARA VENTAS E-COMMERCE
+39;CAMARA MANAGER DOMO INTERIOR;CMIWIFI-PT;6600;370;462,5;SOLO PARA VENTAS E-COMMERCE
+40;CAMARA MANAGER DOMO EXTERIOR;CMEWIFI;10285;370;462,5;SOLO PARA VENTAS E-COMMERCE
+41;CHASIS (Panel, Fuente, Módulo WIFI, Sim, Teclado, Sirena Interna y 2 Tag);CHASIS VVERIF;21600;-;No incluye CR pero si 2 Tag;
+42;PIRCAM VIDEOVERIFICACION;DCVV;4350;50;Solo usar para Videoverificacion;
+43;PIRCAM EXTERIOR VIDEOVERIFICACION;DCXVV;21800;50;Solo usar para Videoverificacion;
+44;DETECTOR PIR STANDARD (NO VV);DVV;1850;50;;
+45;MAGNÉTICO PIR INALÁMBRICO (NO VV);MVV;2650;50;;
+46;DETECTOR MAGNÉTICO CABLEADO;M;605;-;Solo usar como precableado;
+47;DETECTOR VOLUMÉTRICO EXTERIOR INALÁMBRICO (NO VV);VXI;8950;50;Cargar MVV de respaldo, sin cargo. DESCMIX.;
+48;DETECTOR LATERAL EXTERIOR INALÁMBRICO (NO VV);DLI;9600;50;Cargar MVV de respaldo, sin cargo. DESCMIX.;
+49;CONTROL REMOTO VIDEOVERIFICACION;CRVV;1760;50;;
+50;TAG DE PROXIMIDAD (X1);TAG;$                                              -;-;No suma en el chasis.;
+51;SIRENA EXTERNA INALÁMBRICA;SEVV;8635;-;;
+52;MÓDULO / ADAPTADOR WIFI;WFVV;3400;-;No suma en el chasis.;
+53;FUENTE INTERNA;FVV;650;-;;
+54;CENTRAL / PANEL RSI WIP 610;CVV;11500;-;;
+55;TECLADO CON LECTOR DE TAG;TVV;4550;-;Ocupa zona pero no suma en el abono;
+56;SIRENA INTERNA CABLEADA (ANEXO A PANEL);SIVV;1500;-;No suma en el chasis.;
+57;CAMARA MANAGER INTERIOR WIFI;CMIWIFI;8470;370;SOLO PARA VENTAS E-COMMERCE;
+58;CAMARA MANAGER DOMO INTERIOR;CMIWIFI-PT;6600;370;SOLO PARA VENTAS E-COMMERCE;
+59;CAMARA MANAGER DOMO EXTERIOR;CMEWIFI;10285;370;SOLO PARA VENTAS E-COMMERCE;
+60;CHASIS (Central, Tecl, bat, backup, receptora, sirena Int y 2 Tag);Chasis HIB;26050;-;-;No incluye CR pero si 2 Tag
+61;DETECTOR VOLUMENTRICO INALAMBRICO HIBRIDO;DIHIB;1850;50;62,5;
+62;MAGNETICO INALAMBRICO HIBRIDO;MIHIB;2650;50;62,5;
+63;DETECTOR VOLUMENTRICO DOBLE TEC INALAMBRICO HIBRIDO;DIDHIB;4675;50;62,5;
+64;DETECTOR ANTIMASKING CABLEADO;DA;5700;50;62,5;"Ocupa 2 zonas en la central. Informar a Dpto. Técnico para compra de este equipo."
+65;DETECTOR 360ª CABLEADO;DU;8050;50;62,5;Instalaciones mayores a 4 mts de altura, cotizar autoelevador.
+66;DETECTOR VOLUMÉTRICO CABLEADO;D;1850;50;62,5;
+67;DETECTOR VOLUMÉTRICO EXTERIOR CABLEADO;VX;9625;50;62,5;
+68;DETECTOR VOLUMÉTRICO EXTERIOR INALÁMBRICO;VXI;8950;50;62,5;Cargar en Siebel MHIB de respaldo, sin cargo. DESCMIX.
+69;DETECTOR LATERAL EXTERIOR CABLEADO;DL;12250;50;62,5;
+70;DETECTOR LATERAL EXTERIOR INALÁMBRICO;DLI;9600;50;62,5;Cargar en Siebel MHIB de respaldo, sin cargo. DESCMIX.
+71;DETECTOR ROTURA CRISTALES CABLEADO;RV;2250;50;62,5;
+72;DETECTOR VOLUMÉTRICO SEMI EXTERIOR CABLEADO;DX;7600;50;62,5;
+73;DETECTOR ANTIMASKING EXTERIOR CABLEADO;DAX;7250;50;62,5;"Ocupa 2 zonas en la central. Informar a Dpto. Técnico para compra de este equipo."
+74;DETECTOR SÍSMICO CABLEADO;DS;3050;50;62,5;
+75;DETECTOR MAGNÉTICO DE PORTON CABLEADO;MP;880;50;62,5;
+76;DETECTOR MAGNÉTICO CABLEADO;M;605;50;62,5;
+77;PULSADOR FIJO CABLEADO;P;550;50;62,5;
+78;CONTROL REMOTO HIBRIDO;CRHIB;1650;50;62,5;
+79;BACK UP CELULAR HIBRIDO;QHIB;6400;-;-;
+80;EXPANSORA HIBRIDO;EXHIB;1500;-;-;"permite sumar 8 zonas mas si es cableado. Anexar una fuente ""FHIB"" cada 3 expansoras"
+81;TAG HIBRIDO;TAGHIB;220;-;-;
+82;RECEPTORA HIBRIDO;RHIB;4800;-;-;permite sumar 8 zonas mas  si es inalambrico
+83;FUENTE HIBRIDO;FHIB;2800;-;-;se anexa con la expansora
+84;CENTRAL HIBRIDA;CHIB;4950;-;-;(hasta 7 elementos)
+85;TECLADO HIBRIDO;THIB;8800;-;-;
+86;SIRENA INTERNA CABLEADA;S;660;-;-;No suma en el chasis.
+87;SIRENA EXTERNA CABLEADA;SE;3400;-;-;No suma en el chasis.
+88;CAMARA MANAGER INTERIOR WIFI;CMIWIFI;8470;370;462,5;SOLO PARA VENTAS E-COMMERCE
+89;CAMARA MANAGER DOMO INTERIOR;CMIWIFI-PT;6600;370;462,5;SOLO PARA VENTAS E-COMMERCE
+90;CAMARA MANAGER DOMO EXTERIOR;CMEWIFI;10285;370;462,5;SOLO PARA VENTAS E-COMMERCE
+91;DVR de 4 CH (incluye Disco + monitor);DVR 4;17550;-;No se carga el item DR500GB porque ya esta incluido en el DVR;
+92;DVR de 8 CH (incluye Disco + monitor);DVR 8;24250;-;No se carga el item DR500GB porque ya esta incluido;
+93;DVR de 16 CH  (incluye Disco + monitor);DVR 16;27750;-;No se carga el item DR500GB porque ya esta incluido;
+94;CÁMARA EXTERIOR;CE;5700;-;;
+95;CÁMARA INFRARROJA SEMI EXTERIOR;CS;3940;-;;
+96;ROUTER;RT;1550;-;;
+97;CABLEADO ADICIONAL PARA CÁMARAS (cada 10 MTS);CADICC 10M;440;-;Cable UTP;
+98;ILUMINADORES INFRARROJOS HASTA 30 MTS;ILINF;4125;-;;
+99;CABLE VGA P/MONITOR ADICIONAL HASTA 20 MTS;CVGA 20M;2970;-;;
+100;UPS LYONN;UPS LYONN;55110;;;
+101;MICRÓFONO AMBIENTAL;MIC AM;1900;-;;
+102;SOPORTE DE PARED PARA LCD;SLCD;1350;-;;
+103;"MONITOR LCD 19""";LCD19;8300;-;;
+104;BALUN PAR;BALUN;$                                              -;-;Por cada camara se instalan un par.;
+105;DISCO RIGIDO 1TERABYTE;DR500GB;4200;-;Cargar solo por reemplazo, no se pueden vender como adicional;
+106;MUDANZA DVR;MUDANZA DVR;4180;-;;
+107;MUDANZA POR ELEMENTO;MUDEL CAMARAS;1375;-;;
+108;CORRIMIENTO DE DVR;;3575;-;;
+109;CORRIMIENTO CÁMARA;;1485;-;;
+110;CONVERSOR VGA;CONVERSOR VGA;2050;-;Solo por recomendación técnica;
+111;CAMBIO DE CHASIS DVR;CC2-8/ CC16 o CC8-16;5610;-;;
+112;CAJA FUERTE ABULONADA (incluye 1T, 1 DS y 2M);CAF;16400;-;Ocupa 3 zonas de la central. Sólo Vista 48 y NX 8.;
+113;CAJA FUERTECON  BUZÓN  (incluye 1T, 1 DS y 2M);CAFB;16400;-;;
+114;MUDANZA;MUDANZA CAJA FUERTE;4510;-;;
+115;CORRIMIENTO;CORRIMIENTO CAJA FUERTE;3245;-;;
+116;KIT DE LOCALIZACIÓN  VEHICULAR;AP GPS;8280;-;;
+117;MUDANZA / CAMBIO DE VEHICULO;MUDANZA VEHICULO;4600;-;;
+118;CHASIS (Panel, Fuente, Teclado, Sirenta Interna, GPRS);CIINC20;40100;-;;
+119;DETECTOR DE HUMO;H;4750;62,5;;
+120;PULSADORES  INCENDIO;IP;4550;62,5;;
+121;SIRENA INTERNA INCENDIO;IS;6600;-;;
+122;SIRENA EXTERNA INCENDIO;IE;7200;-;;
+123;1 A 3 DÍAS;AUTOE3;100100;-;;
+124;1 SEMANA;AUTOE1S;223300;-;;
+125;SERVICE;;2420;-;;
+126;VISITA AMPLIACION;;1980;-;;
+127;SERVICE REMOTO;;1320;-;;
+128;CORRIMIENTO POR ELEMENTO;;2420;-;;
+129;SOLICITUD DE GRABACIONES;GRABACION EOH;1320;-;;
+130;SIRENA EXTERNA;SE;3400;-;Valor para ampliacion;
+131;PLACA CONTROLADORA;CONT ACC;$                                              -;-;Una por puerta;
+132;PLACA DE EXPANSION;EXP ACC;$                                              -;-;"Anexar a partir de 6 puertas o mas, siempre va 1 controladora + N expansoras (N=q
+puertas)";
+133;LECTORA;LEC ACC;7500;-;sin excepcion instalar 2 por puerta;
+134;FUENTE;FUENTE ACC;$                                              -;-;Una hasta 4 controladoras + expansoras;
+135;BATERIA;B;$                                              -;-;Una hasta 4 controladoras + expansoras;
+136;CERRADURA;CERR ACC;$                                              -;-;Una por puerta;
+137;HERRAJES;HERRAJE ACC;$                                              -;-;Una por puerta;
+138;DESTRABA PESTILLO;DPEST ACC;3100;-;Una por puerta;
+139;MAGNETICO DE BORNERA INICIAL;MX;$                                              -;-;Una por puerta;
+140;BOTON SALIDA;BSALIDA ACC;2900;-;Una por Puerta ppal;
+141;TAG CONTROL ACCESO;TAG ACC;200;-;2 TAG gratis por UF + 5 gratis para Administracion, adicionales con costo;
+142;CONTACTO MAGNETICO CONTROL DE ACCESO;CM ACC;$                                              -;-;Uno por Mx= 1 por puerta;
+143;CAJA ESTANCO BOTON EMERGENCIA CONTROL ACCESO;GA 8;$                                              -;-;Uno por Boton Salida;
+144;CAJA ESTANCO LECTORA CONTROL ACCESO;GA 12;$                                              -;-;Uno por lectora;
+145;ENVIO TAG;ENV TAG;1000;-;Costo por envio de tags;
+146;PUERTA DE MAXIMA SEGURIDAD;;21000;-;2 LEC ACC + 1 DPEST ACC + 1 BSALIDA ACC;
+147;PUERTA DE MEDIA SEGURIDAD;;18100;-;2 LEC ACC + 1 DPEST ACC;
+148;PUERTA DE BAJA SEGURIDAD;;15000;-;2 LEC ACC;
