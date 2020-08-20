@@ -1,5 +1,10 @@
 function setCSV(archivo) {
     //Columnas ;Descripción;Código;$ Instalacion;$ Abono;$ A. Riesgo;Observaciones
+    console.log('Procesando archivo '+archivo)
+    if(!unik.fileExist(archivo)){
+        console.log('El archivo no existe!')
+        return
+    }
     let d=unik.getFile(archivo)//.replace('Nave,\n', 'Nave, ')
     let m0=d.split('\n')
     let colNom1=''

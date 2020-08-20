@@ -49,12 +49,5 @@ mongoose.connect(urlMongoDatabase, { useNewUrlParser: true }, function (err, res
     });
 })
 
-//const pdf2html = require('pdf2html')
+console.log('Nota: Comando forever a utilizar "forever start /root/ppres/index.js"')
 
-//pdf2html.html('lista.pdf', (err, html) => {
-//    if (err) {
-//        console.error('Conversion error: ' + err)
-//    } else {
-//        console.log(html)
-//    }
-//})

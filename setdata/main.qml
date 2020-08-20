@@ -37,7 +37,7 @@ ApplicationWindow{
         //iconv -f ISO-8859-1 -t UTF-8//TRANSLIT productos_14_08_20_utf8.csv -o productos_14_08_20_utf8_2.csv
 
         logView.showLog('Iniciando...')
-        let t1=JS.setCSV('productos_14_08_20.csv')
+        let t1=JS.setCSV('productos_19_08_2020.csv')
         let tf=t1+'\n'
         unik.setFile('fullScript.js', tf)
         logView.showLog(tf)
