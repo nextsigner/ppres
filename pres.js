@@ -20,6 +20,7 @@
                                          fechaInstalacion: Date,
                                          fechaRegistro: Date
         */
+        let html1='<html><body>'
         let d='<b>Técnico: </b>'+v1+'<br />'
             +'<b>Cliente: </b>'+v2+'<br />'
             +'<b>Contrato: </b>'+v3+'<br />'
@@ -27,7 +28,9 @@
             +'<b>Fecha de Instalación: </b>'+sd+' <br />'
             +'<b>Fecha de Presupuesto: </b>'+sd1+' <br />'
 
-        cpEMail = spawnEMail('sh', ['sendEmail.sh', '"'+d+'"', "Nuevo presupuesto", 'qtpizarro@gmail.com']);
+        let html2='</body></html>'
+        let df=html1+d+html2
+        cpEMail = spawnEMail('sh', ['sendEmail.sh', '"'+df+'"', "Nuevo presupuesto", 'qtpizarro@gmail.com']);
         cpEMail.on("exit", function(data) {
             console.log('Mail enviado: '+sd);
             console.log('Datos: '+d.replace(/<b>/g, '').replace(/<\/b>/g, '').replace(/<br \/>/g, '\n'));
