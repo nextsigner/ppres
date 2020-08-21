@@ -25,6 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //var mongoose = require('mongoose');
 require('./ppres')(app);
 require('./prods')(app);
+require('./pres')(app);
 
 //app.listen(app.get('port'), function() {
 //    console.log('Servidor ppres iniciado.');
