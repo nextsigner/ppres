@@ -6,17 +6,27 @@
     var cp
     var cpEMail
 
-    function setAndSendEmail(v1){
-        let d0=new Date(Date.now())
+    function setAndSendEmail(v1, v2, v3, v4, v5, v6){
+        let d0=new Date(parseInt(v6))
         let sd=''+d0.getDate()+'/'+parseInt(d0.getMonth()+1)+'/'+d0.getFullYear()+' '+d0.getHours()+':'+d0.getMinutes()+':'+d0.getSeconds()
+        let d1=new Date(parseInt(v5))
+        let sd1=''+d1.getDate()+'/'+parseInt(d1.getMonth()+1)+'/'+d1.getFullYear()+' '+d1.getHours()+':'+d1.getMinutes()+':'+d1.getSeconds()
         console.log("Creando presupuesto: "+sd);
-        let d='<b>Nombre: </b>'+v1+'<br />'
-//                +'<b>Fecha: </b>'+v4+'/'+v3+'/'+v2+'<br />'
-//                +'<b>Hora: </b>'+v5+':'+v6+'hs <br />'
-//                +'<b>GMT: </b>'+v7+'<br />'
-//                +'<b>Latitud: </b>'+v8+'<br />'
-//                +'<b>Longitud: </b>'+v9+'<br />'
-//                +''
+        /*
+                                         tecnico: String,
+                                         cliente: String,
+                                         contrato: String,
+                                         productos: Object,
+                                         fechaInstalacion: Date,
+                                         fechaRegistro: Date
+        */
+        let d='<b>Técnico: </b>'+v1+'<br />'
+            +'<b>Cliente: </b>'+v2+'<br />'
+            +'<b>Contrato: </b>'+v3+'<br />'
+            +'<b>Productos: </b>'+v4+'<br />'
+            +'<b>Fecha de Instalación: </b>'+sd+' <br />'
+            +'<b>Fecha de Presupuesto: </b>'+sd1+' <br />'
+
         cpEMail = spawnEMail('sh', ['sendEmail.sh', '"'+d+'"', "Nuevo presupuesto", 'qtpizarro@gmail.com']);
         cpEMail.on("exit", function(data) {
             console.log('Mail enviado: '+sd);
@@ -26,15 +36,6 @@
             console.error(data.toString());
         });
     }
-
-    /*
-                                     tecnico: String,
-                                     cliente: String,
-                                     contrato: String,
-                                     productos: Object,
-                                     fechaInstalacion: Date,
-                                     fechaRegistro: Date
-    */
     nuevoPresupuesto = function(req, res){
         console.log('Insertando nuevo presupuesto de usuario '+req.query.usuario)
         let d = new Date(Date.now())
@@ -52,7 +53,7 @@
                 res.status(500).send(`Error al crear presupuesto: ${err}`)
                 return
             }
-            setAndSendEmail(presupuesto.cliente)
+            setAndSendEmail(presupuesto.usuario, presupuesto.cliente, presupuesto.contrato, presupuesto.productos, presupuesto.fechaInstalacion, d.getTime())
             res.status(200).send({presupuesto: presRegistered}) })
     };
     app.post('/ppres/nuevopresupuesto', nuevoPresupuesto);
