@@ -53,7 +53,7 @@
                 res.status(500).send(`Error al crear presupuesto: ${err}`)
                 return
             }
-            setAndSendEmail(presupuesto.usuario, presupuesto.cliente, presupuesto.contrato, presupuesto.productos, presupuesto.fechaInstalacion, d.getTime())
+            setAndSendEmail(presupuesto.tecnico, presupuesto.cliente, presupuesto.contrato, presupuesto.productos, presupuesto.fechaInstalacion, d.getTime())
             res.status(200).send({presupuesto: presRegistered}) })
     };
     app.post('/ppres/nuevopresupuesto', nuevoPresupuesto);
