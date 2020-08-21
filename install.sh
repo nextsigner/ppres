@@ -15,6 +15,11 @@ sudo apt-get install -y npm
 
 npm install
 
+npm install forever -g
+npm install -g forever-service
+sudo forever-service install ppres --script /root/ppres/index.js
+sudo service ppres start
+
 #echo "install.sh copiando archivo /etc/init.d/vncserver..."
 #sudo cp xstartup ~/.vnc/xstartup
 #sudo chmod +x ~/.vnc/xstartup
