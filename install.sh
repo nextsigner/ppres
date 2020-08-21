@@ -9,6 +9,9 @@ sudo chmod -R 755 files
 
 sudo apt-get install -y nano
 
+sudo apt-get install postfix mailutils libsasl2-2 libsasl2-modules
+sudo dpkg-reconfigure postfix
+
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs 
 sudo apt-get install -y npm
