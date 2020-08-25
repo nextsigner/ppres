@@ -18,18 +18,19 @@
             +'<img src="https://github.com/pizarromario/pizarromario.github.io/blob/master/imgs/logo_cabecera.png?raw=true" style="width: 100%"/>'
             +'<b>Técnico: </b>'+v1+'<br />'
             +'<b>Cliente: </b>'+v2+'<br />'
-            let json=JSON.parse(v4)
-            d+='<table><tr>Descripción</tr><tr>Código</tr>'
-            for(var i=0;i<Object.keys(json).length;i++){
-                d+='<td>'+json['item'+i].descripcion+'</td>'
-                d+='<td>'+json['item'+i].codigo+'</td>'
-            }
-            d+='</table>'
-            //            +'<b>Cliente: </b>'+v2+'<br />'
-//            +'<b>Contrato: </b>'+v3+'<br />'
-//            +'<b>Productos: </b>'+v4+'<br />'
-//            +'<b>Fecha de Instalación: </b>'+sd+' <br />'
-//            +'<b>Fecha de Presupuesto: </b>'+sd1+' <br />'
+        console.log('JSON PRODS: '+v4)
+        let json=JSON.parse(v4)
+        d+='<table><tr>Descripción</tr><tr>Código</tr>'
+        for(var i=0;i<Object.keys(json).length;i++){
+            d+='<td>'+json['item'+i].descripcion+'</td>'
+            d+='<td>'+json['item'+i].codigo+'</td>'
+        }
+        d+='</table>'
+        //            +'<b>Cliente: </b>'+v2+'<br />'
+        //            +'<b>Contrato: </b>'+v3+'<br />'
+        //            +'<b>Productos: </b>'+v4+'<br />'
+        //            +'<b>Fecha de Instalación: </b>'+sd+' <br />'
+        //            +'<b>Fecha de Presupuesto: </b>'+sd1+' <br />'
         /*
 <from>Visita.Tecnica-Argentina@prosegur.com</from>
 <nombreFrom>Prosegur Alarmas</nombreFrom>
