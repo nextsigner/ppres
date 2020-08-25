@@ -20,10 +20,12 @@
             +'<b>Cliente: </b>'+v2+'<br />'
         console.log('JSON PRODS: '+v4)
         let json=JSON.parse(v4)
-        d+='<table><tr>Descripción</tr><tr>Código</tr>'
+        d+='<table border=2 ><tr><td>Descripción</td><td>Código</td><td>Cantidad</td><td>Total</td></tr>'
         for(var i=0;i<Object.keys(json).length;i++){
             d+='<td>'+json['item'+i].descripcion+'</td>'
             d+='<td>'+json['item'+i].codigo+'</td>'
+            d+='<td>'+json['item'+i].cant+'</td>'
+            d+='<td>'+json['item'+i].totalItem+'</td>'
         }
         d+='</table>'
         //            +'<b>Cliente: </b>'+v2+'<br />'
