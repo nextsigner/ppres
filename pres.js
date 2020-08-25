@@ -20,13 +20,16 @@
             +'<b>Cliente: </b>'+v2+'<br />'
         console.log('JSON PRODS: '+v4)
         let json=JSON.parse(v4)
-        d+='<table border=2 ><tr><td><b>Descripción</b></td><td><b>Código</b></td><td><b>Cantidad</b></td><td><b>Total</b></td></tr>'
+        d+='<table border=2 ><tr><td><b>Descripción</b></td><td><b>Código</b></td><td><b>Cantidad</b></td><td><b>Precio de Instalación</b></td><td><b>Precio de Abono</b></td><td><b>Adicional Riesgo</b></td><td><b>Total Parcial</b></td></tr>'
         for(var i=0;i<Object.keys(json).length;i++){
             d+='<tr>'
             d+='<td>'+json['item'+i].descripcion+'</td>'
-            d+='<td>'+json['item'+i].codigo+'</td>'
-            d+='<td>'+json['item'+i].cant+'</td>'
-            d+='<td>'+json['item'+i].totalItem+'</td>'
+            d+='<td text-align="center">'+json['item'+i].codigo+'</td>'
+            d+='<td text-align="center">'+json['item'+i].cant+'</td>'
+            d+='<td text-align="center">$'+json['item'+i].precioinstalacion+'</td>'
+            d+='<td text-align="center">$'+json['item'+i].precioabono+'</td>'
+            d+='<td text-align="center">$'+json['item'+i].adicionalriesgo+'</td>'
+            d+='<td text-align="center">$'+json['item'+i].totalItem+'</td>'
             d+='</tr>'
         }
         d+='</table>'
@@ -135,7 +138,9 @@
 <refID>AR1-44PJFVC</refID>
         */
         let asunto=''
-        if(devSending){
+        let vdevSending=''+devSending
+        console.log('DS:'+vdevSending+' vdev:'+vdev)
+        if(vdevSending==='true'){
             asunto='Prueba '+vdev
         }else{
             asunto='Nuevo Presupuesto'
