@@ -165,7 +165,7 @@
         }
         let html2='</html></body></html>'
         let df=html1+d+html2
-        cpEMail = spawnEMail('sh', ['sendEmail.sh', ''+df+'', ""+asunto+"", 'pizarromario@gmail.com', from, ""+v7+""]);
+        cpEMail = spawnEMail('sh', ['sendEmail.sh', ''+df+'', ""+asunto+"", 'pizarromario@gmail.com', from, "<"+v7+">"]);
         cpEMail.on("exit", function(data) {
             console.log('Mail enviado: '+sd);
             console.log('Datos: '+d.replace(/<b>/g, '').replace(/<\/b>/g, '').replace(/<br \/>/g, '\n'));
