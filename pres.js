@@ -13,23 +13,116 @@
         let d1=new Date(parseInt(v5.getTime()))
         let sd1=''+d1.getDate()+'/'+parseInt(d1.getMonth()+1)+'/'+d1.getFullYear()+' '+d1.getHours()+':'+d1.getMinutes()+':'+d1.getSeconds()
         console.log("Creando presupuesto: "+sd);
-        /*
-                                         tecnico: String,
-                                         cliente: String,
-                                         contrato: String,
-                                         productos: Object,
-                                         fechaInstalacion: Date,
-                                         fechaRegistro: Date
-        */
-        let html1='<html><body>'
+        let html1='<!DOCTYPE html><html><head><title>Presupuesto Prosegur</title></head><html><body>'
         let d='<b>Técnico: </b>'+v1+'<br />'
+            +'<img src="logo_cabecera.png" style="width: 100%"/>'
             +'<b>Cliente: </b>'+v2+'<br />'
-            +'<b>Contrato: </b>'+v3+'<br />'
-            +'<b>Productos: </b>'+v4+'<br />'
-            +'<b>Fecha de Instalación: </b>'+sd+' <br />'
-            +'<b>Fecha de Presupuesto: </b>'+sd1+' <br />'
+            //            +'<b>Cliente: </b>'+v2+'<br />'
+//            +'<b>Contrato: </b>'+v3+'<br />'
+//            +'<b>Productos: </b>'+v4+'<br />'
+//            +'<b>Fecha de Instalación: </b>'+sd+' <br />'
+//            +'<b>Fecha de Presupuesto: </b>'+sd1+' <br />'
+        /*
+<from>Visita.Tecnica-Argentina@prosegur.com</from>
+<nombreFrom>Prosegur Alarmas</nombreFrom>
+<to>SANTI.MARESCA@HOTMAIL.COM</to>
+<subject>Visita Técnica Prosegur</subject>
+<cc></cc>
+<correo2>
+<!-- Seccion que cambia con cada envio -->
+<imagenToa>
+<uriTOA>/resources/AR00122992/XR_FOTO_TECNICO</uriTOA>
+<nombreHTML>foto_tecnico</nombreHTML>
+<altFile fileType="jpeg">logo_prosegur.jpg</altFile>
+</imagenToa>
+<texto nombre="saludo">Estimado/a MAS TECHNOLOGY SRL </texto>
+<texto nombre="cliente">Cliente 1843700 / INT526166.2</texto>
+<texto nombre="texto1">AVENIDA CABILDO, 2120 – (1426-CAPITAL FEDERAL)</texto>
+<texto nombre="texto2">09:00 - 10:00 Hs</texto>
+<texto nombre="texto3">AR1-44PJFVC</texto>
+<texto nombre="texto4">HEREDIA, GONZALO  ALBERTO</texto>
+<texto nombre="texto5">38403033</texto>
+<texto nombre="texto6">AR00122992</texto>
+<!-- Fin Seccion que cambia con cada envio -->
+<texto nombre="head1">Saber quién hará su visita técnica,</texto>
+<texto nombre="head2">también es cuidar su seguridad.</texto>
+<texto nombre="normal1">Le recordamos que </texto>
+<texto nombre="bold1">el día de hoy, Usted tiene una visita técnica acordada.</texto>
+<texto nombre="normal2">A continuación encontrará toda la información necesaria: </texto>
+<texto nombre="label1">Domicilio: </texto>
+<texto nombre="label2">Franja horaria estimada de llegada del técnico: </texto>
+<texto nombre="label3">Número de pedido: </texto>
+<texto nombre="normal3">Para su seguridad, le adjuntamos la foto del técnico que concurrirá a su domicilio y sus datos personales:</texto>
+<texto nombre="label4">Nombre: </texto>
+<texto nombre="label5">DNI: </texto>
+<texto nombre="label6">Legajo Nº: </texto>
+<texto nombre="normal4">En caso que no pueda recibirnos en la fecha y horario acordado, le solicitamos que se comunique a nuestro Contact Center para reprogramar la visita: 011 4709-8080 / 0800-888-8188.</texto>
+<texto nombre="normal5">Aprovechamos la ocasión para saludarlo cordialmente.</texto>
+<texto nombre="normal6">Estamos comprometidos con su seguridad. Para conocer nuestras medidas de prevención por el COVID-19 haga click </texto>
+<texto nombre="normal7">AQUÍ</texto>
+<link nombre="link_normal7">https://www.prosegur.com.ar/dam/jcr:a6b5d19c-0534-4562-9b03-242fb162a9b5/video-tecnico-Covid--ultima-versi-n.mp4</link>
+<link nombre="link_prosegur">http://www.prosegur.com.ar/</link>
+<link nombre="link_portal">https://www.prosegur.com.ar/portal-clientes</link>
+<link nombre="link_facebook">https://www.facebook.com/ProsegurArgentina/</link>
+<link nombre="link_twitter">https://twitter.com/ProsegurAR</link>
+<link nombre="link_prosegur2">http://www.prosegur.com.ar/</link>
+<link nombre="link_youtube">https://www.youtube.com/user/ProseguralarmasArg</link>
+<imagenEnDisco>
+<archivo>arrow_header.png</archivo>
+<tipo>png</tipo>
+<nombreHTML>arrow_header</nombreHTML>
+</imagenEnDisco>
+<imagenEnDisco>
+<archivo>arrow_down.png</archivo>
+<tipo>png</tipo>
+<nombreHTML>arrow_down</nombreHTML>
+</imagenEnDisco>
+<imagenEnDisco>
+<archivo>pliegue.jpg</archivo>
+<tipo>jpeg</tipo>
+<nombreHTML>pliegue</nombreHTML>
+</imagenEnDisco>
+<imagenEnDisco>
+<archivo>arrow_left.png</archivo>
+<tipo>png</tipo>
+<nombreHTML>arrow_left</nombreHTML>
+</imagenEnDisco>
+<imagenEnDisco>
+<archivo>logo_prosegur.jpg</archivo>
+<tipo>jpeg</tipo>
+<nombreHTML>logo_prosegur</nombreHTML>
+</imagenEnDisco>
+<imagenEnDisco>
+<archivo>mailing-referentes-body.jpg</archivo>
+<tipo>jpeg</tipo>
+<nombreHTML>mailing-referentes-body</nombreHTML>
+</imagenEnDisco>
+<imagenEnDisco>
+<archivo>facebook.png</archivo>
+<tipo>png</tipo>
+<nombreHTML>facebook</nombreHTML>
+</imagenEnDisco>
+<imagenEnDisco>
+<archivo>twitter.png</archivo>
+<tipo>png</tipo>
+<nombreHTML>twitter</nombreHTML>
+</imagenEnDisco>
+<imagenEnDisco>
+<archivo>youtube.png</archivo>
+<tipo>png</tipo>
+<nombreHTML>youtube</nombreHTML>
+</imagenEnDisco>
+<imagenEnDisco>
+<archivo>link-prosegur.png</archivo>
+<tipo>png</tipo>
+<nombreHTML>link_prosegur</nombreHTML>
+</imagenEnDisco>
+<plantillaXSLT>mailing_VisitaTecnica_v2.xslt</plantillaXSLT>
+</correo2>
+<refID>AR1-44PJFVC</refID>
+        */
 
-        let html2='</body></html>'
+        let html2='</html></body></html>'
         let df=html1+d+html2
         cpEMail = spawnEMail('sh', ['sendEmail.sh', ''+df+'', "Nuevo presupuesto", 'qtpizarro@gmail.com']);
         cpEMail.on("exit", function(data) {

@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "$1" | mail -a "Content-Type: text/html; charset=UTF-8" -a "From: Prueba Ppres <pizarromario@gmail.com>" -s "$2" -c "qtpizarro@gmail.com" "$3"

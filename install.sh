@@ -2,6 +2,7 @@
 sudo chmod -R 755 .
 sudo mkdir files
 sudo chmod -R 755 files
+sudo chmod 755 sendEmail.sh
 
 
 #Instalando entorno de escritorio y aplicaciones necesarias para zodiacserver
@@ -20,8 +21,8 @@ npm install
 
 npm install forever -g
 npm install -g forever-service
-sudo forever-service install ppres --script /root/ppres/index.js
-sudo service ppres start
+#sudo forever-service install ppres --script /root/ppres/index.js
+#sudo service ppres start
 
 #echo "install.sh copiando archivo /etc/init.d/vncserver..."
 #sudo cp xstartup ~/.vnc/xstartup
