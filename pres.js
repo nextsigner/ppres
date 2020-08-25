@@ -6,7 +6,7 @@
     var cp
     var cpEMail
 
-    function setAndSendEmail(devSending, vdev, v1, v2, v3, v4, v5, v6){
+    function setAndSendEmail(devSending, vdev, v1, v2, v3, v4, v5, v6, v7){
         let d0=new Date(parseInt(v6))
         let sd=''+d0.getDate()+'/'+parseInt(d0.getMonth()+1)+'/'+d0.getFullYear()+' '+d0.getHours()+':'+d0.getMinutes()+':'+d0.getSeconds()
         //console.log('v5: '+v5)
@@ -165,7 +165,7 @@
         }
         let html2='</html></body></html>'
         let df=html1+d+html2
-        cpEMail = spawnEMail('sh', ['sendEmail.sh', ''+df+'', ""+asunto+"", 'pizarromario@gmail.com', from]);
+        cpEMail = spawnEMail('sh', ['sendEmail.sh', ''+df+'', ""+asunto+"", 'pizarromario@gmail.com', from, v7]);
         cpEMail.on("exit", function(data) {
             console.log('Mail enviado: '+sd);
             console.log('Datos: '+d.replace(/<b>/g, '').replace(/<\/b>/g, '').replace(/<br \/>/g, '\n'));
@@ -191,7 +191,7 @@
                 res.status(500).send(`Error al crear presupuesto: ${err}`)
                 return
             }
-            setAndSendEmail(req.body.devSending, req.body.vdev, presupuesto.tecnico, presupuesto.cliente, presupuesto.contrato, presupuesto.productos, presupuesto.fechaInstalacion, d.getTime())
+            setAndSendEmail(req.body.devSending, req.body.vdev, presupuesto.tecnico, presupuesto.cliente, presupuesto.contrato, presupuesto.productos, presupuesto.fechaInstalacion, d.getTime(), req.body.email)
             res.status(200).send({presupuesto: presRegistered}) })
     };
     app.post('/ppres/nuevopresupuesto', nuevoPresupuesto);
