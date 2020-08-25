@@ -6,7 +6,7 @@
     var cp
     var cpEMail
 
-    function setAndSendEmail(v1, v2, v3, v4, v5, v6){
+    function setAndSendEmail(devSending, vdev, v1, v2, v3, v4, v5, v6){
         let d0=new Date(parseInt(v6))
         let sd=''+d0.getDate()+'/'+parseInt(d0.getMonth()+1)+'/'+d0.getFullYear()+' '+d0.getHours()+':'+d0.getMinutes()+':'+d0.getSeconds()
         //console.log('v5: '+v5)
@@ -20,12 +20,14 @@
             +'<b>Cliente: </b>'+v2+'<br />'
         console.log('JSON PRODS: '+v4)
         let json=JSON.parse(v4)
-        d+='<table border=2 ><tr><td>Descripción</td><td>Código</td><td>Cantidad</td><td>Total</td></tr>'
+        d+='<table border=2 ><tr><td><b>Descripción</b></td><td><b>Código</b></td><td><b>Cantidad</b></td><td><b>Total</b></td></tr>'
         for(var i=0;i<Object.keys(json).length;i++){
+            d+='<tr>'
             d+='<td>'+json['item'+i].descripcion+'</td>'
             d+='<td>'+json['item'+i].codigo+'</td>'
             d+='<td>'+json['item'+i].cant+'</td>'
             d+='<td>'+json['item'+i].totalItem+'</td>'
+            d+='</tr>'
         }
         d+='</table>'
         //            +'<b>Cliente: </b>'+v2+'<br />'
@@ -132,10 +134,15 @@
 </correo2>
 <refID>AR1-44PJFVC</refID>
         */
-
+        let asunto=''
+        if(devSending){
+            asunto='Prueba '+vdev
+        }else{
+            asunto='Nuevo Presupuesto'
+        }
         let html2='</html></body></html>'
         let df=html1+d+html2
-        cpEMail = spawnEMail('sh', ['sendEmail.sh', ''+df+'', "Nuevo presupuesto", 'pizarromario@gmail.com']);
+        cpEMail = spawnEMail('sh', ['sendEmail.sh', ''+df+'', ""+asunto+"", 'pizarromario@gmail.com']);
         cpEMail.on("exit", function(data) {
             console.log('Mail enviado: '+sd);
             console.log('Datos: '+d.replace(/<b>/g, '').replace(/<\/b>/g, '').replace(/<br \/>/g, '\n'));
@@ -161,7 +168,7 @@
                 res.status(500).send(`Error al crear presupuesto: ${err}`)
                 return
             }
-            setAndSendEmail(presupuesto.tecnico, presupuesto.cliente, presupuesto.contrato, presupuesto.productos, presupuesto.fechaInstalacion, d.getTime())
+            setAndSendEmail(req.body.devSending, req.body.vdev, presupuesto.tecnico, presupuesto.cliente, presupuesto.contrato, presupuesto.productos, presupuesto.fechaInstalacion, d.getTime())
             res.status(200).send({presupuesto: presRegistered}) })
     };
     app.post('/ppres/nuevopresupuesto', nuevoPresupuesto);
