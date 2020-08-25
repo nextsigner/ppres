@@ -15,7 +15,7 @@
         console.log("Creando presupuesto: "+sd);
         let html1='<!DOCTYPE html><html><head><title>Presupuesto Prosegur</title></head><html><body>'
         let d='<b>Técnico: </b>'+v1+'<br />'
-            +'<img src="logo_cabecera.png" style="width: 100%"/>'
+            +'<img src="http://66.97.46.73:8081/logo_cabecera.png" style="width: 100%"/>'
             +'<b>Cliente: </b>'+v2+'<br />'
             //            +'<b>Cliente: </b>'+v2+'<br />'
 //            +'<b>Contrato: </b>'+v3+'<br />'
