@@ -24,12 +24,12 @@
         for(var i=0;i<Object.keys(json).length;i++){
             d+='<tr>'
             d+='<td>'+json['item'+i].descripcion+'</td>'
-            d+='<td text-align="center">'+json['item'+i].codigo+'</td>'
-            d+='<td text-align="center">'+json['item'+i].cant+'</td>'
-            d+='<td text-align="center">$'+json['item'+i].precioinstalacion+'</td>'
-            d+='<td text-align="center">$'+json['item'+i].precioabono+'</td>'
-            d+='<td text-align="center">$'+json['item'+i].adicionalriesgo+'</td>'
-            d+='<td text-align="center">$'+json['item'+i].totalItem+'</td>'
+            d+='<td text-align=center>'+json['item'+i].codigo+'</td>'
+            d+='<td text-align=center>'+json['item'+i].cant+'</td>'
+            d+='<td text-align=center>$'+json['item'+i].precioinstalacion+'</td>'
+            d+='<td text-align=center>$'+json['item'+i].precioabono+'</td>'
+            d+='<td text-align=center>$'+json['item'+i].adicionalriesgo+'</td>'
+            d+='<td text-align=center>$'+json['item'+i].totalItem+'</td>'
             d+='</tr>'
         }
         d+='</table>'
