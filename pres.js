@@ -21,8 +21,8 @@
             let json=JSON.parse(v4)
             d+='<table><tr>Descripción</tr><tr>Código</tr>'
             for(var i=0;i<Object.keys(json).length;i++){
-                d+='<td>'+json.descripcion+'</td>'
-                d+='<td>'+json.codigo+'</td>'
+                d+='<td>'+json['item'+i].descripcion+'</td>'
+                d+='<td>'+json['item'+i].codigo+'</td>'
             }
             d+='</table>'
             //            +'<b>Cliente: </b>'+v2+'<br />'
