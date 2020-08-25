@@ -14,8 +14,9 @@
         let sd1=''+d1.getDate()+'/'+parseInt(d1.getMonth()+1)+'/'+d1.getFullYear()+' '+d1.getHours()+':'+d1.getMinutes()+':'+d1.getSeconds()
         console.log("Creando presupuesto: "+sd);
         let html1='<!DOCTYPE html><html><head><title>Presupuesto Prosegur</title></head><html><body>'
-        let d='<b>Técnico: </b>'+v1+'<br />'
-            +'<img src="https://github.com/pizarromario/pizarromario/raw/master/imgs/logo_cabecera.png" style="width: 100%"/>'
+        let d=''
+            +'<img src="https://raw.githubusercontent.com/pizarromario/pizarromario/master/imgs/logo_cabecera.png" style="width: 100%"/>'
+            +'<b>Técnico: </b>'+v1+'<br />'
             +'<b>Cliente: </b>'+v2+'<br />'
             //            +'<b>Cliente: </b>'+v2+'<br />'
 //            +'<b>Contrato: </b>'+v3+'<br />'
