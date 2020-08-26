@@ -35,7 +35,7 @@
             +'<b>Contrato: </b>'+jsonCli.contrato+'<br /><br />'
 
         //console.log('JSON PRODS: '+v4)
-        let json=JSON.parse(v4)
+        let json=JSON.parse(v3)
         d+='<h2>Productos/Servicios</h2>'
         d+='<table border="2"><tr>'
                 +'<td><b>Descripción</b></td>'
