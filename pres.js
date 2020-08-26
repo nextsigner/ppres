@@ -34,7 +34,7 @@
             +'<b>E-Mail: </b>'+jsonCli.email+'<br /><br />'
             +'<b>Contrato: </b>'+jsonCli.contrato+'<br /><br />'
 
-        //console.log('JSON PRODS: '+v4)
+        console.log('JSON PRODS: '+v3+"\n\n\n\n")
         let json=JSON.parse(v3)
         d+='<h2>Productos/Servicios</h2>'
         d+='<table border="2"><tr>'
