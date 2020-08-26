@@ -7,6 +7,7 @@
     var cpEMail
 
     function setAndSendEmail(devSending, vdev, v1, v2, v3, v4, v5, v6, v7){
+        //setAndSendEmail(req.body.devSending, req.body.vdev, presupuesto.tecnico, req.body.cliente, presupuesto.productos, presupuesto.fechaInstalacion, d.getTime())
         let d0=new Date(parseInt(v6))
         let sd=''+d0.getDate()+'/'+parseInt(d0.getMonth()+1)+'/'+d0.getFullYear()+' '+d0.getHours()+':'+d0.getMinutes()+':'+d0.getSeconds()
         //console.log('v5: '+v5)
@@ -14,13 +15,26 @@
         let sd1=''+d1.getDate()+'/'+parseInt(d1.getMonth()+1)+'/'+d1.getFullYear()+' '+d1.getHours()+':'+d1.getMinutes()+':'+d1.getSeconds()
         console.log("Creando presupuesto: "+sd);
         let html1='<!DOCTYPE html><html><head><title>Presupuesto Prosegur</title></head><html><body>'
+        let jsonTec=JSON.parse(v1)
+        let jsonCli=JSON.parse(v2)
         let d=''
             +'<img src="https://github.com/pizarromario/pizarromario.github.io/blob/master/imgs/logo_cabecera.png?raw=true" style="width: 100%"/><br />'
-            +'<b>Técnico: </b>'+v1+'<br />'
-            +'<b>Cliente: </b>'+v2+'<br />'
-            +'<b>Contrato: </b>'+v3+'<br /><br />'
-        console.log('JSON PRODS: '+v4)
+
+            +'<h2>Técnico</h2>'
+            +'<b>Nombre: </b>'+jsonTec.nombre+'<br />'
+            +'<b>Teléfono: </b>'+jsonTec.telefono+'<br />'
+            +'<b>E-Mail: </b>'+jsonTec.email+'<br />'
+
+            +'<h2>Cliente</h2>'
+            +'<b>Nombre y Apellido: </b>'+jsonCli.nombre+'<br />'
+            +'<b>Dirección: </b>'+jsonCli.direccion+'<br /><br />'
+            +'<b>Teléfono: </b>'+jsonCli.telefono+'<br /><br />'
+            +'<b>E-Mail: </b>'+jsonCli.email+'<br /><br />'
+            +'<b>Contrato: </b>'+jsonCli.contrato+'<br /><br />'
+
+        //console.log('JSON PRODS: '+v4)
         let json=JSON.parse(v4)
+        d+='<h2>Productos/Servicios</h2>'
         d+='<table border="2"><tr>'
                 +'<td><b>Descripción</b></td>'
                 +'<td><b>Código</b></td>'
@@ -46,8 +60,24 @@
                 +'<td><b>Total</b></td>'
                 +'</tr>'
         d+='<tr>'
-                +'<td colspan=6></td>'
-                +'<td>$11111</td>'
+                +'<td colspan=5></td>'
+                +'<td>Total Sin IVA</td>'
+                +'<td>$'+json['valores'].totalSinIVA+'</td>'
+                +'</tr>'
+        d+='<tr>'
+                +'<td colspan=5></td>'
+                +'<td>Total Con IVA</td>'
+                +'<td>$'+json['valores'].totalConIVA+'</td>'
+                +'</tr>'
+        d+='<tr>'
+                +'<td colspan=5></td>'
+                +'<td>Descuento</td>'
+                +'<td>%'+json['valores'].descuento+'</td>'
+                +'</tr>'
+        d+='<tr>'
+                +'<td colspan=5></td>'
+                +'<td>Total</td>'
+                +'<td>$'+json['valores'].totalConDescuento+'</td>'
                 +'</tr>'
         d+='</table>'
         d+='<br />'
@@ -195,7 +225,7 @@
                 res.status(500).send(`Error al crear presupuesto: ${err}`)
                 return
             }
-            setAndSendEmail(req.body.devSending, req.body.vdev, presupuesto.tecnico, presupuesto.cliente, presupuesto.contrato, presupuesto.productos, presupuesto.fechaInstalacion, d.getTime(), req.body.email)
+            setAndSendEmail(req.body.devSending, req.body.vdev, presupuesto.tecnico, req.body.cliente, presupuesto.productos, presupuesto.fechaInstalacion, d.getTime())
             res.status(200).send({presupuesto: presRegistered}) })
     };
     app.post('/ppres/nuevopresupuesto', nuevoPresupuesto);
