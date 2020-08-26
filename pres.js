@@ -15,9 +15,10 @@
         console.log("Creando presupuesto: "+sd);
         let html1='<!DOCTYPE html><html><head><title>Presupuesto Prosegur</title></head><html><body>'
         let d=''
-            +'<img src="https://github.com/pizarromario/pizarromario.github.io/blob/master/imgs/logo_cabecera.png?raw=true" style="width: 100%"/>'
+            +'<img src="https://github.com/pizarromario/pizarromario.github.io/blob/master/imgs/logo_cabecera.png?raw=true" style="width: 100%"/><br />'
             +'<b>Técnico: </b>'+v1+'<br />'
             +'<b>Cliente: </b>'+v2+'<br />'
+            +'<b>Contrato: </b>'+v3+'<br /><br />'
         console.log('JSON PRODS: '+v4)
         let json=JSON.parse(v4)
         d+='<table border="2"><tr>'
@@ -49,6 +50,8 @@
                 +'<td>$11111</td>'
                 +'</tr>'
         d+='</table>'
+        d+='<br />'
+        d+='<b>Fecha de Instalación: </b>'+sd+' <br />'
         //            +'<b>Cliente: </b>'+v2+'<br />'
         //            +'<b>Contrato: </b>'+v3+'<br />'
         //            +'<b>Productos: </b>'+v4+'<br />'
