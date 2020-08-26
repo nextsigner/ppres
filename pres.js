@@ -46,7 +46,7 @@
                 +'<td><b>Adicional Riesgo</b></td>'
                 +'<td><b>Total Parcial</b></td>'
                 +'</tr>'
-        for(var i=0;i<Object.keys(json).length;i++){
+        for(var i=0;i<Object.keys(json).length-1;i++){
             d+='<tr>'
             d+='<td>'+json['item'+i].descripcion+'</td>'
             d+='<td style="text-align:center">'+json['item'+i].codigo+'</td>'
