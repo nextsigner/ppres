@@ -6,12 +6,12 @@
     var cp
     var cpEMail
 
-    function setAndSendEmail(devSending, vdev, v1, v2, v3, v4, v5, v6, v7){
+    function setAndSendEmail(devSending, vdev, v1, v2, v3, v4, v5){
         //setAndSendEmail(req.body.devSending, req.body.vdev, presupuesto.tecnico, req.body.cliente, presupuesto.productos, presupuesto.fechaInstalacion, d.getTime())
-        let d0=new Date(parseInt(v6))
+        let d0=new Date(parseInt(v5))
         let sd=''+d0.getDate()+'/'+parseInt(d0.getMonth()+1)+'/'+d0.getFullYear()+' '+d0.getHours()+':'+d0.getMinutes()+':'+d0.getSeconds()
         //console.log('v5: '+v5)
-        let d1=new Date(parseInt(v5.getTime()))
+        let d1=new Date(parseInt(v4.getTime()))
         let sd1=''+d1.getDate()+'/'+parseInt(d1.getMonth()+1)+'/'+d1.getFullYear()+' '+d1.getHours()+':'+d1.getMinutes()+':'+d1.getSeconds()
         console.log("Creando presupuesto: "+sd);
         let html1='<!DOCTYPE html><html><head><title>Presupuesto Prosegur</title></head><html><body>'
