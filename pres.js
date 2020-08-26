@@ -23,16 +23,16 @@
             +'<img src="https://github.com/pizarromario/pizarromario.github.io/blob/master/imgs/logo_cabecera.png?raw=true" style="width: 100%"/><br />'
 
             +'<h2>Técnico</h2>'
-            +'<b>Nombre: </b>'+jsonTec.nombre+'<br />'
-            +'<b>Teléfono: </b>'+jsonTec.telefono+'<br />'
-            +'<b>E-Mail: </b>'+jsonTec.email+'<br />'
+            +'<b>Nombre: </b>'+jsonTec.tecnico.nombre+'<br />'
+            +'<b>Teléfono: </b>'+jsonTec.tecnico.telefono+'<br />'
+            +'<b>E-Mail: </b>'+jsonTec.tecnico.email+'<br />'
 
             +'<h2>Cliente</h2>'
             +'<b>Nombre y Apellido: </b>'+jsonCli.nombre+'<br />'
-            +'<b>Dirección: </b>'+jsonCli.direccion+'<br /><br />'
-            +'<b>Teléfono: </b>'+jsonCli.telefono+'<br /><br />'
-            +'<b>E-Mail: </b>'+jsonCli.email+'<br /><br />'
-            +'<b>Contrato: </b>'+jsonCli.contrato+'<br /><br />'
+            +'<b>Dirección: </b>'+jsonCli.cliente.direccion+'<br /><br />'
+            +'<b>Teléfono: </b>'+jsonCli.cliente.telefono+'<br /><br />'
+            +'<b>E-Mail: </b>'+jsonCli.cliente.email+'<br /><br />'
+            +'<b>Contrato: </b>'+jsonCli.cliente.contrato+'<br /><br />'
 
         console.log('JSON PRODS: '+v3+"\n\n\n\n")
         let json=JSON.parse(v3)
@@ -192,7 +192,7 @@
         let asunto=''
         let from='Ppres - '+v1
         let vdevSending=''+devSending
-        console.log('DS:'+vdevSending+' vdev:'+vdev+' email cliente: '+jsonCli.email)
+        //console.log('DS:'+vdevSending+' vdev:'+vdev+' email cliente: '+jsonCli.cliente.email)
         if(vdevSending==='true'){
             asunto='Prueba '+vdev
             from='Programador Prueba '+vdev
@@ -201,7 +201,7 @@
         }
         let html2='</html></body></html>'
         let df=html1+d+html2
-        cpEMail = spawnEMail('sh', ['sendEmail.sh', ''+df+'', ""+asunto+"", 'pizarromario@gmail.com', from, "<"+jsonCli.email+">"]);
+        cpEMail = spawnEMail('sh', ['sendEmail.sh', ''+df+'', ""+asunto+"", 'pizarromario@gmail.com', from, "<"+jsonCli.cliente.email+">"]);
         cpEMail.on("exit", function(data) {
             console.log('Mail enviado: '+sd);
             console.log('Datos: '+d.replace(/<b>/g, '').replace(/<\/b>/g, '').replace(/<br \/>/g, '\n'));
