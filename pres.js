@@ -214,12 +214,11 @@
         let presupuesto = new Presupuesto()
         presupuesto.tecnico = req.body.tecnico
         presupuesto.cliente = req.body.cliente
-        presupuesto.contrato = req.body.contrato
         presupuesto.productos = req.body.productos
         presupuesto.fechaInstalacion = req.body.fechaInstalacion
         presupuesto.fechaRegistro = d
 
-        console.log('Creando un nuevo presupuesto de técnico: '+presupuesto.tecnico+' Productos: \n'+presupuesto.productos)
+        //console.log('Creando un nuevo presupuesto de técnico: '+presupuesto.tecnico+' Productos: \n'+presupuesto.productos)
         presupuesto.save(function(err, presRegistered){
             if(err){
                 res.status(500).send(`Error al crear presupuesto: ${err}`)
