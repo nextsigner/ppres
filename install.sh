@@ -10,6 +10,7 @@ sudo apt-get install -y nano xfce4 xfce4-goodies gnome-icon-theme tightvncserver
 
 sudo apt-get install postfix mailutils libsasl2-2 libsasl2-modules
 sudo dpkg-reconfigure postfix
+sudo service postfix start
 
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs 
