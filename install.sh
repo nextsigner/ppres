@@ -26,12 +26,12 @@ echo "install.sh copiando archivo /etc/init.d/vncserver..."
 sudo cp xstartup ~/.vnc/xstartup
 sudo chmod +x ~/.vnc/xstartup
 
-#echo "install.sh copiando archivo /etc/init.d/vncserver..."
+echo "install.sh copiando archivo /etc/init.d/vncserver..."
 sudo cp vncserver /etc/init.d/vncserver
 sudo chmod +x /etc/init.d/vncserver
 sudo update-rc.d vncserver defaults
 
-#echo "install.sh copiando archivo ~/.config/autostart/mercurio.desktop..."
+echo "install.sh copiando archivo ~/.config/autostart/mercurio.desktop..."
 sudo mkdir ~/.config/autostart
 sudo cp ppres.desktop ~/.config/autostart/ppres.desktop
 sudo chmod +x ~/.config/autostart/ppres.desktop
