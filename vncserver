@@ -19,6 +19,7 @@ fi
 ### END INIT INFO
 
 echo dato3 > /root/aaa3.txt
+sudo service postfix start
 PATH="$PATH:/usr/X11R6/bin/"
 
 # The Username:Group that will run VNC
