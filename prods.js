@@ -69,7 +69,7 @@
                           skip:0, // Starting Row
                           //limit:1, // Ending Row
                           sort:{
-                              descripcion: 1 //Sort by Date Added DESC
+                              codigo: 1 //Sort by Date Added DESC
                           }
                       },
                       function(err, resultados){
