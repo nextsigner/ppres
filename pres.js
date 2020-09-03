@@ -28,11 +28,11 @@
             +'<b>E-Mail: </b>'+jsonTec.tecnico.email+'<br />'
 
             +'<h2>Cliente</h2>'
-            +'<b>Nombre y Apellido: </b>'+jsonCli.nombre+'<br />'
-            +'<b>Dirección: </b>'+jsonCli.cliente.direccion+'<br /><br />'
-            +'<b>Teléfono: </b>'+jsonCli.cliente.telefono+'<br /><br />'
-            +'<b>E-Mail: </b>'+jsonCli.cliente.email+'<br /><br />'
-            +'<b>Contrato: </b>'+jsonCli.cliente.contrato+'<br /><br />'
+            +'<b>Nombre y Apellido: </b>'+jsonCli.cliente.nombre+'<br />'
+            +'<b>Dirección: </b>'+jsonCli.cliente.direccion+'<br />'
+            +'<b>Teléfono: </b>'+jsonCli.cliente.telefono+'<br />'
+            +'<b>E-Mail: </b>'+jsonCli.cliente.email+'<br />'
+            +'<b>Contrato: </b>'+jsonCli.cliente.contrato+'<br />'
 
         console.log('JSON PRODS: '+v3+"\n\n\n\n")
         let json=JSON.parse(v3)
