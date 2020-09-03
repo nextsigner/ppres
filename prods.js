@@ -56,13 +56,14 @@
     searchProducto = function(req, res){
         console.log('Buscando producto con nombre '+req.query.consulta)
         var regExp= new RegExp(''+(''+req.query.consulta).toUpperCase()+'|'+(''+req.query.consulta).toLocaleLowerCase())
-        Producto.find({
+        /*Producto.find({
                           //date: {$gt: h }
                           //date: {$gte: "2019-06-12T00:00:00+01:00", $lte: "2019-12-12T23:00:00+01:00" }
                           //date: {$gte: h, $lte: hf }
                           codigo: regExp,
                           descripcion: regExp // Search Filters
-                      },
+                      },*/
+        Producto.find({ $or: [ { codigo: regExp }, { descripcion: regExp } ] },
                       ['descripcion', 'codigo', 'precioinstalacion', 'precioabono', 'adicionalriesgo', 'observaciones'], // Columns to Return
                       {
                           skip:0, // Starting Row
