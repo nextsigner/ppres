@@ -60,6 +60,7 @@
                           //date: {$gt: h }
                           //date: {$gte: "2019-06-12T00:00:00+01:00", $lte: "2019-12-12T23:00:00+01:00" }
                           //date: {$gte: h, $lte: hf }
+                          codigo: regExp,
                           descripcion: regExp // Search Filters
                       },
                       ['descripcion', 'codigo', 'precioinstalacion', 'precioabono', 'adicionalriesgo', 'observaciones'], // Columns to Return

@@ -51,9 +51,9 @@
             d+='<td>'+json['item'+i].descripcion+'</td>'
             d+='<td style="text-align:center">'+json['item'+i].codigo+'</td>'
             d+='<td style="text-align:center">'+json['item'+i].cant+'</td>'
-            d+='<td style="text-align:center">$'+json['item'+i].precioinstalacion+'</td>'
-            d+='<td style="text-align:center">$'+json['item'+i].precioabono+'</td>'
-            d+='<td style="text-align:center">$'+json['item'+i].adicionalriesgo+'</td>'
+            d+='<td style="text-align:center">$'+parseFloat(json['item'+i].precioinstalacion).toFixed(2)+'</td>'
+            d+='<td style="text-align:center">$'+parseFloat(json['item'+i].precioabono).toFixed(2)+'</td>'
+            d+='<td style="text-align:center">$'+parseFloat(json['item'+i].adicionalriesgo).toFixed(2)+'</td>'
             d+='<td style="text-align:center">$'+parseFloat(json['item'+i].precioinstalacion * json['item'+i].cant).toFixed(2)+'</td>'
             d+='</tr>'
         }
@@ -85,11 +85,16 @@
         d+='<br />'
         d+='<b>Fecha de Presupuesto: </b>'+sd+' <br />'
         d+='<b>Fecha de Instalación: </b>'+sd1+' <br />'
-        //            +'<b>Cliente: </b>'+v2+'<br />'
-        //            +'<b>Contrato: </b>'+v3+'<br />'
-        //            +'<b>Productos: </b>'+v4+'<br />'
-        //            +'<b>Fecha de Instalación: </b>'+sd+' <br />'
-        //            +'<b>Fecha de Presupuesto: </b>'+sd1+' <br />'
+
+        d+='<p>En caso que no pueda recibirnos en la fecha y horario acordado, le solicitamos que se comunique a nuestro Contact Center para reprogramar la visita: 011 4709-8080 / 0800-888-8188.</p>'
+d+='<p nombre="normal5">Aprovechamos la ocasión para saludarlo cordialmente.</p>'
+d+='<p nombre="normal6">Estamos comprometidos con su seguridad. Para conocer nuestras medidas de prevención por el COVID-19 haga click '
+d+='<a href="https://www.prosegur.com.ar/dam/jcr:a6b5d19c-0534-4562-9b03-242fb162a9b5/video-tecnico-Covid--ultima-versi-n.mp4">AQUÍ</a></p>'
+d+='<a href="http://www.prosegur.com.ar/">Ir a Prosegur</a><br />'
+d+='<a href="https://www.prosegur.com.ar/portal-clientes">Ir a Portal de Clientes</a><br />'
+d+='<a href="https://www.facebook.com/ProsegurArgentina/">Ir al Facebook de Prosegur Argentina</a><br />'
+d+='<a href="https://twitter.com/ProsegurAR">Ir al Twitter de Prosegur Argentina</a><br />'
+d+='<a href="https://www.youtube.com/user/ProseguralarmasArg">Ir al Canal de YouTube de Prosegur Argentina</a><br />'
         /*
 <from>Visita.Tecnica-Argentina@prosegur.com</from>
 <nombreFrom>Prosegur Alarmas</nombreFrom>
@@ -124,71 +129,7 @@
 <texto nombre="label4">Nombre: </texto>
 <texto nombre="label5">DNI: </texto>
 <texto nombre="label6">Legajo Nº: </texto>
-<texto nombre="normal4">En caso que no pueda recibirnos en la fecha y horario acordado, le solicitamos que se comunique a nuestro Contact Center para reprogramar la visita: 011 4709-8080 / 0800-888-8188.</texto>
-<texto nombre="normal5">Aprovechamos la ocasión para saludarlo cordialmente.</texto>
-<texto nombre="normal6">Estamos comprometidos con su seguridad. Para conocer nuestras medidas de prevención por el COVID-19 haga click </texto>
-<texto nombre="normal7">AQUÍ</texto>
-<link nombre="link_normal7">https://www.prosegur.com.ar/dam/jcr:a6b5d19c-0534-4562-9b03-242fb162a9b5/video-tecnico-Covid--ultima-versi-n.mp4</link>
-<link nombre="link_prosegur">http://www.prosegur.com.ar/</link>
-<link nombre="link_portal">https://www.prosegur.com.ar/portal-clientes</link>
-<link nombre="link_facebook">https://www.facebook.com/ProsegurArgentina/</link>
-<link nombre="link_twitter">https://twitter.com/ProsegurAR</link>
-<link nombre="link_prosegur2">http://www.prosegur.com.ar/</link>
-<link nombre="link_youtube">https://www.youtube.com/user/ProseguralarmasArg</link>
-<imagenEnDisco>
-<archivo>arrow_header.png</archivo>
-<tipo>png</tipo>
-<nombreHTML>arrow_header</nombreHTML>
-</imagenEnDisco>
-<imagenEnDisco>
-<archivo>arrow_down.png</archivo>
-<tipo>png</tipo>
-<nombreHTML>arrow_down</nombreHTML>
-</imagenEnDisco>
-<imagenEnDisco>
-<archivo>pliegue.jpg</archivo>
-<tipo>jpeg</tipo>
-<nombreHTML>pliegue</nombreHTML>
-</imagenEnDisco>
-<imagenEnDisco>
-<archivo>arrow_left.png</archivo>
-<tipo>png</tipo>
-<nombreHTML>arrow_left</nombreHTML>
-</imagenEnDisco>
-<imagenEnDisco>
-<archivo>logo_prosegur.jpg</archivo>
-<tipo>jpeg</tipo>
-<nombreHTML>logo_prosegur</nombreHTML>
-</imagenEnDisco>
-<imagenEnDisco>
-<archivo>mailing-referentes-body.jpg</archivo>
-<tipo>jpeg</tipo>
-<nombreHTML>mailing-referentes-body</nombreHTML>
-</imagenEnDisco>
-<imagenEnDisco>
-<archivo>facebook.png</archivo>
-<tipo>png</tipo>
-<nombreHTML>facebook</nombreHTML>
-</imagenEnDisco>
-<imagenEnDisco>
-<archivo>twitter.png</archivo>
-<tipo>png</tipo>
-<nombreHTML>twitter</nombreHTML>
-</imagenEnDisco>
-<imagenEnDisco>
-<archivo>youtube.png</archivo>
-<tipo>png</tipo>
-<nombreHTML>youtube</nombreHTML>
-</imagenEnDisco>
-<imagenEnDisco>
-<archivo>link-prosegur.png</archivo>
-<tipo>png</tipo>
-<nombreHTML>link_prosegur</nombreHTML>
-</imagenEnDisco>
-<plantillaXSLT>mailing_VisitaTecnica_v2.xslt</plantillaXSLT>
-</correo2>
-<refID>AR1-44PJFVC</refID>
-        */
+*/
         let asunto=''
         let from='Ppres - '+v1
         let vdevSending=''+devSending
