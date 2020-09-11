@@ -47,6 +47,13 @@
                 +'<td><b>Total Parcial</b></td>'
                 +'</tr>'
         for(var i=0;i<Object.keys(json).length-1;i++){
+            let precioSubTotalInst=0
+            if((''+json['item'+i].precioinstalacion).indexOf('-')<0&&parseInt( json['item'+i].cant)>0){
+                precioSubTotalInst=parseFloat(json['item'+i].precioinstalacion * json['item'+i].cant)
+                if (isNaN(precioSubTotalInst)) {
+                    precioSubTotalInst=0
+                }
+            }
             d+='<tr>'
             d+='<td>'+json['item'+i].descripcion+'</td>'
             d+='<td style="text-align:center">'+json['item'+i].codigo+'</td>'
@@ -54,7 +61,7 @@
             d+='<td style="text-align:center">$'+parseFloat(json['item'+i].precioinstalacion).toFixed(2)+'</td>'
             d+='<td style="text-align:center">$'+parseFloat(json['item'+i].precioabono).toFixed(2)+'</td>'
             d+='<td style="text-align:center">$'+parseFloat(json['item'+i].adicionalriesgo).toFixed(2)+'</td>'
-            d+='<td style="text-align:center">$'+parseFloat(json['item'+i].precioinstalacion * json['item'+i].cant).toFixed(2)+'</td>'
+            d+='<td style="text-align:center">$'+parseFloat(precioSubTotalInst).toFixed(2)+'</td>'
             d+='</tr>'
         }
         d+='<tr>'
@@ -64,22 +71,22 @@
         d+='<tr>'
                 +'<td colspan=5></td>'
                 +'<td style="text-align:center">Total Sin IVA</td>'
-                +'<td style="text-align:center">$'+json['valores'].totalSinIVA+'</td>'
+                +'<td style="text-align:center">$'+parseFloat(json['valores'].totalSinIVA).toFixed(2)+'</td>'
                 +'</tr>'
         d+='<tr>'
                 +'<td colspan=5></td>'
-                +'<td>Total Con IVA</td>'
-                +'<td>$'+json['valores'].totalConIVA+'</td>'
+                +'<td style="text-align:center">Total Con IVA</td>'
+                +'<td style="text-align:center">$'+parseFloat(json['valores'].totalConIVA).toFixed(2)+'</td>'
                 +'</tr>'
         d+='<tr>'
                 +'<td colspan=5></td>'
-                +'<td>Descuento</td>'
-                +'<td>%'+json['valores'].descuento+'</td>'
+                +'<td style="text-align:center">Descuento</td>'
+                +'<td style="text-align:center">%'+json['valores'].descuento+'</td>'
                 +'</tr>'
         d+='<tr>'
                 +'<td colspan=5></td>'
-                +'<td>Total</td>'
-                +'<td>$'+json['valores'].totalConDescuento+'</td>'
+                +'<td style="text-align:center">Total</td>'
+                +'<td style="text-align:center">$'+parseFloat(json['valores'].totalConDescuento).toFixed(2)+'</td>'
                 +'</tr>'
         d+='</table>'
         d+='<br />'
@@ -87,14 +94,14 @@
         d+='<b>Fecha de Instalación: </b>'+sd1+' <br />'
 
         d+='<p>En caso que no pueda recibirnos en la fecha y horario acordado, le solicitamos que se comunique a nuestro Contact Center para reprogramar la visita: 011 4709-8080 / 0800-888-8188.</p>'
-d+='<p nombre="normal5">Aprovechamos la ocasión para saludarlo cordialmente.</p>'
-d+='<p nombre="normal6">Estamos comprometidos con su seguridad. Para conocer nuestras medidas de prevención por el COVID-19 haga click '
-d+='<a href="https://www.prosegur.com.ar/dam/jcr:a6b5d19c-0534-4562-9b03-242fb162a9b5/video-tecnico-Covid--ultima-versi-n.mp4">AQUÍ</a></p>'
-d+='<a href="http://www.prosegur.com.ar/">Ir a Prosegur</a><br />'
-d+='<a href="https://www.prosegur.com.ar/portal-clientes">Ir a Portal de Clientes</a><br />'
-d+='<a href="https://www.facebook.com/ProsegurArgentina/">Ir al Facebook de Prosegur Argentina</a><br />'
-d+='<a href="https://twitter.com/ProsegurAR">Ir al Twitter de Prosegur Argentina</a><br />'
-d+='<a href="https://www.youtube.com/user/ProseguralarmasArg">Ir al Canal de YouTube de Prosegur Argentina</a><br />'
+        d+='<p nombre="normal5">Aprovechamos la ocasión para saludarlo cordialmente.</p>'
+        d+='<p nombre="normal6">Estamos comprometidos con su seguridad. Para conocer nuestras medidas de prevención por el COVID-19 haga click '
+        d+='<a href="https://www.prosegur.com.ar/dam/jcr:a6b5d19c-0534-4562-9b03-242fb162a9b5/video-tecnico-Covid--ultima-versi-n.mp4">AQUÍ</a></p>'
+        d+='<a href="http://www.prosegur.com.ar/">Ir a Prosegur</a><br />'
+        d+='<a href="https://www.prosegur.com.ar/portal-clientes">Ir a Portal de Clientes</a><br />'
+        d+='<a href="https://www.facebook.com/ProsegurArgentina/">Ir al Facebook de Prosegur Argentina</a><br />'
+        d+='<a href="https://twitter.com/ProsegurAR">Ir al Twitter de Prosegur Argentina</a><br />'
+        d+='<a href="https://www.youtube.com/user/ProseguralarmasArg">Ir al Canal de YouTube de Prosegur Argentina</a><br />'
         /*
 <from>Visita.Tecnica-Argentina@prosegur.com</from>
 <nombreFrom>Prosegur Alarmas</nombreFrom>
