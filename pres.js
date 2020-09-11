@@ -54,13 +54,27 @@
                     precioSubTotalInst=0
                 }
             }
+            let precioPA=0.00
+            if((''+json['item'+i].precioabono).indexOf('-')<0&&parseInt( json['item'+i].precioabono)>0){
+                precioPA=parseFloat(json['item'+i].precioabono)
+                if (isNaN(precioPA)) {
+                    precioPA=0.00
+                }
+            }
+            let precioAR=0.00
+            if((''+json['item'+i].adicionalriesgo).indexOf('-')<0&&parseInt( json['item'+i].adicionalriesgo)>0){
+                precioAR=parseFloat(json['item'+i].adicionalriesgo)
+                if (isNaN(precioAR)) {
+                    precioAR=0.00
+                }
+            }
             d+='<tr>'
             d+='<td>'+json['item'+i].descripcion+'</td>'
             d+='<td style="text-align:center">'+json['item'+i].codigo+'</td>'
             d+='<td style="text-align:center">'+json['item'+i].cant+'</td>'
             d+='<td style="text-align:center">$'+parseFloat(json['item'+i].precioinstalacion).toFixed(2)+'</td>'
-            d+='<td style="text-align:center">$'+parseFloat(json['item'+i].precioabono).toFixed(2)+'</td>'
-            d+='<td style="text-align:center">$'+parseFloat(json['item'+i].adicionalriesgo).toFixed(2)+'</td>'
+            d+='<td style="text-align:center">$'+parseFloat(precioPA).toFixed(2)+'</td>'
+            d+='<td style="text-align:center">$'+parseFloat(precioAR).toFixed(2)+'</td>'
             d+='<td style="text-align:center">$'+parseFloat(precioSubTotalInst).toFixed(2)+'</td>'
             d+='</tr>'
         }
